@@ -22,5 +22,5 @@ async def hello(ctx):
 
 
 
-token = os.environ['TOKEN']
+token = process.env.TOKEN
 client.run(token)
