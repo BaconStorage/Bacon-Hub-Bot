@@ -5,5 +5,5 @@ from discord.ext import commands
 
 
 
-token = process.env.TOKEN
+token = os.environ.get('TOKEN')
 client.run(token)
