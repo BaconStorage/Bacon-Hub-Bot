@@ -43,7 +43,7 @@ async def buyerrole(ctx):
 async def howtobuy(ctx):
     await ctx.send('To buy, follow these steps:\n1. Visit our website.\n2. Select the product you want to purchase.\n3. Follow the checkout process.\n4. Contact our support if you need assistance.')
 
-@bot.command(name='Commands')
+@bot.command(name='Help')
 async def commands(ctx):
     commands_list = """
     Here are the available commands:
