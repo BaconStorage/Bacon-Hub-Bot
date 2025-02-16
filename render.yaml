@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: discord-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    envVars:
+      - key: DISCORD_TOKEN
+        value: YOUR_BOT_TOKEN_HERE
