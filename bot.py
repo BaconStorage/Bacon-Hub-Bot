@@ -1,9 +1,11 @@
-import os
-from dotenv import load_dotenv
+import discord
 from discord.ext import commands
+import os
+import webserver
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.environ['discordkey']
+
+webserver.keep_alive()
 
 bot = commands.Bot(command_prefix='!')
 
@@ -11,8 +13,4 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
-@bot.command(name='ping')
-async def ping(ctx):
-    await ctx.send('Pong!')
-
-bot.run(TOKEN)
+bot.run(DISCORD_TOKEN)
