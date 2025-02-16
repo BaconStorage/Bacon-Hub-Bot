@@ -5,5 +5,5 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "./start.sh"
     envVars:
-      - key: DISCORD_TOKEN
+      - key: discordkey
         value: YOUR_BOT_TOKEN_HERE
